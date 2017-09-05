@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -18,14 +18,6 @@ a{
   }
 }
 `
-
-const Button = styled.div`
-    
-    :hover {
-        color: white
-    }
-`
-
 
 const GlobalNav = () => {
     return (
