@@ -6,14 +6,13 @@ export function setAxiosDefaults(){
   axios.defaults.headers.uid  = localStorage.getItem("uid");
   axios.defaults.headers['access-token']  = localStorage.getItem("access-token");
 
-  axios.interceptors.response.use((res) => {
-    if (res.headers['access-token']){
-      console.log(res.headers['access-token'])
-      localStorage.setItem("access-token", res.headers['access-token'])
-      axios.defaults.headers['access-token'] = res.headers['access-token']; 
-    }
-    return res
-  });
+  // axios.interceptors.response.use((res) => {
+  //   if (res.headers['access-token']){
+  //     localStorage.setItem("access-token", res.headers['access-token'])
+  //     axios.defaults.headers['access-token'] = res.headers['access-token']; 
+  //   }
+  //   return res
+  // });
 }
 
 export function setAxiosHeaders(headers){

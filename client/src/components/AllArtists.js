@@ -29,14 +29,14 @@ class AllArtists extends Component{
       const response = await axios.get('/api/artists');
       const artists = response.data;
       this.setState({artists});
-    } catch (err) {
-      this.setState({error: err})
+    } catch (error) {
+      this.setState({error})
     }
   }
 
   render(){
     if (this.state.error){
-      return <h1>NOT A VALID USER</h1>
+      console.log(this.state.error)
     }
     return (
       <ArtistListStyles>
